@@ -1,0 +1,257 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 35px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6658e8, #b54be5);
+    color: #25253a;
+}
+
+.app {
+    width: 100%;
+    max-width: 680px;
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 22px;
+    box-shadow: 0 20px 60px rgba(30, 20, 80, 0.22);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.logo {
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 12px;
+    display: grid;
+    place-items: center;
+    border-radius: 16px;
+    background: #eeeaff;
+    color: #7158e8;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: #88869b;
+    font-size: 14px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: #f7f6ff;
+    padding: 16px 10px;
+    text-align: center;
+    border-radius: 14px;
+    border: 1px solid #eeebff;
+}
+
+.stat-card span {
+    font-size: 12px;
+    color: #77758d;
+}
+
+.stat-card h2 {
+    color: #7259e8;
+    margin-top: 8px;
+    font-size: 25px;
+}
+
+.task-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.task-form input,
+.search-box input {
+    min-width: 0;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    color: #33334a;
+}
+
+.task-form input {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #e6e3f2;
+    border-radius: 11px;
+}
+
+.task-form input:focus,
+.search-box:focus-within {
+    border-color: #8069ef;
+}
+
+.task-form button {
+    border: none;
+    padding: 0 20px;
+    border-radius: 11px;
+    background: #7158e8;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.task-form button:hover {
+    background: #5941d0;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 15px;
+    border: 1px solid #e6e3f2;
+    border-radius: 11px;
+    margin-bottom: 26px;
+}
+
+.search-box span {
+    color: #8069ef;
+    font-size: 24px;
+}
+
+.list-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.list-heading h2 {
+    font-size: 19px;
+}
+
+.list-heading span {
+    color: #88869b;
+    font-size: 13px;
+}
+
+.task-list {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 12px;
+    border: 1px solid #efedf5;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    transition: background 0.2s;
+}
+
+.task-item:hover {
+    background: #faf9ff;
+}
+
+.task-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #7158e8;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.task-text {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    font-size: 14px;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #aaa7b8;
+}
+
+.delete-btn {
+    border: none;
+    background: #fff0f1;
+    color: #e14d67;
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.delete-btn:hover {
+    background: #ffe0e4;
+}
+
+.empty-message {
+    text-align: center;
+    padding: 28px 8px;
+    color: #9692a8;
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    color: #a09cb1;
+    font-size: 12px;
+    margin-top: 25px;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 18px 10px;
+        align-items: flex-start;
+    }
+
+    .app {
+        padding: 22px 16px;
+    }
+
+    .header h1 {
+        font-size: 27px;
+    }
+
+    .stat-card {
+        padding: 13px 5px;
+    }
+
+    .stat-card span {
+        font-size: 10px;
+    }
+
+    .stat-card h2 {
+        font-size: 22px;
+    }
+
+    .task-form {
+        flex-direction: column;
+    }
+
+    .task-form button {
+        padding: 13px;
+    }
+}

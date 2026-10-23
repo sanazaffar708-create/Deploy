@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow | My Daily Tasks</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <main class="app">
+        <header class="header">
+            <div class="logo">✓</div>
+            <h1>TaskFlow</h1>
+            <p>Small steps, big achievements.</p>
+        </header>
+
+        <section class="stats">
+            <div class="stat-card">
+                <span>Total Tasks</span>
+                <h2 id="totalTasks">0</h2>
+            </div>
+            <div class="stat-card">
+                <span>Completed</span>
+                <h2 id="completedTasks">0</h2>
+            </div>
+            <div class="stat-card">
+                <span>Remaining</span>
+                <h2 id="remainingTasks">0</h2>
+            </div>
+        </section>
+
+        <form id="taskForm" class="task-form">
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="What do you need to do?"
+                autocomplete="off"
+                maxlength="150"
+                required
+            >
+            <button type="submit">+ Add Task</button>
+        </form>
+
+        <div class="search-box">
+            <span>⌕</span>
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search your tasks..."
+            >
+        </div>
+
+        <div class="list-heading">
+            <h2>My Tasks</h2>
+            <span id="taskLabel">0 tasks</span>
+        </div>
+
+        <ul id="taskList" class="task-list"></ul>
+
+        <p id="emptyMessage" class="empty-message">
+            ✨ No tasks yet. Add your first task!
+        </p>
+
+        <footer>
+            Made with focus & consistency 💜
+        </footer>
+    </main>
+
+</body>
+</html>
